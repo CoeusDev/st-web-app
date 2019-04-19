@@ -3,6 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    userAccounts: []
+  }
+
+  componentDidMount() {
+    fetch('https://coeusdevapi.azurewebsites.net/api/values')
+    .then(res => res.json())
+    .then((data) => {
+      this.setState({ userAccounts: data })
+    })
+    .catch(console.log)
+  }
+
   render() {
     return (
       <div className="App">
