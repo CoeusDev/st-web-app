@@ -22,6 +22,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>{this.state.userAccounts.map(ua => `${ua.username}, `)}</p>
+          {/* Dummy comment. */}
         </header>
       </div>
     );
